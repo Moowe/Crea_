@@ -1,0 +1,9 @@
+:root {
+    --header-color: rgb(255, 255, 255); /* background color header+drop menu */
+    --drop-menu-hover: rgba(0, 26, 255, 0.397); /* drop menu hover color */
+    --drop-menu-text-color-hover: rgb(0, 0, 0); /* drop menu text color on hover */
+    --text-color: rgb(0, 0, 0); /* text color of header + drop menu items*/
+    --hamburger-color: rgb(0, 0, 0); /* hamburger menu color */
+    --footer-color: #ececec; /* footer color */
+    --footer-text: rgb(0, 0, 0); /*footer text color*/
+}

@@ -1,0 +1,81 @@
+.main_align {
+    max-width: 1200px;
+    margin: 70px auto 0 auto;
+        
+    article {
+        position: relative;
+        display: flex;
+        margin: 15px;
+        margin-bottom: 20px;
+        background-color: rgba(245, 186, 76, 0.116);
+
+        .main_text_pad {
+            padding-bottom: 20px;
+        }
+
+        .artCont {
+            height: 100%;
+            opacity: 1;
+        }
+
+        .artShow {
+            padding-top: 0px!important;
+            padding-bottom: 0px!important;
+            height: 100px;
+            opacity: 1;
+            transition: height 0.3s, opacity 0.2s, padding 0.5s;
+        }
+
+        .artHide {
+            padding-top: 0px!important;   
+            transform-origin: top;
+            height: 0;
+            opacity: 0;
+            transition: height 0.3s, opacity 0.1s, padding 0.5s;
+        }
+
+        >img {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            bottom: -16px;
+            left: calc(50% - 95.5px);
+            background-color: white;
+            border-radius: 100%;
+            padding: 5px;
+            transition:  all 0.4s;  
+        }
+
+        .rotate {
+            transform: rotate(540deg);
+        }
+
+        div:nth-of-type(1) {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            header {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                font-family: didact-gothic, sans-serif;
+                color: rgb(94, 94, 94);
+            }
+        } 
+
+        div:nth-of-type(2) {
+            background-color: rgb(245, 186, 76);
+            min-width: 150px;
+            padding: 20px;
+            position: relative;
+            
+
+            img {
+                display: block;
+                background-color: rgb(245, 186, 76);
+                position: absolute;
+                
+            }
+        }
+    }
+}

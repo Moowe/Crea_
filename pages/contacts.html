@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+</head>
+<body ondragstart="return false;" ondrop="return false;">
+    <header class="header_index">
+        <a href="../index.html"><img src="../images/crea_logo_small.png" alt="Crea"></a> <!--change to <h1><p><div> etc. -->
+        <input type="checkbox" id="burger_container">
+        <label id="burger" for="burger_container">
+                <div></div>
+                <div></div>
+                <div></div>
+        </label>
+        <nav id="drop_menu">
+            <ul class="menu">
+                <li><a class="drop_menu_elements" href="../pages/services.html">Услуги</a></li>
+                <li><a class="drop_menu_elements" href="../pages/portfolio.html">Проекти</a></li>
+                <li><a class="drop_menu_elements" href="../pages/blog.html">Блог</a></li>
+                <li><a class="drop_menu_elements" href="">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main_align">
+        <section class="contacts">
+            <header class="contacts_header">
+                <h2>Контакти</h2>
+                <figure class="phone_fig">
+                    <img src="../images/mobile.png" alt="">
+                    <figcaption class="figcap_center">+359 887 896 528</figcaption>
+                </figure>
+                <figure>
+                    <img class="fig_img" src="../images/location.png" alt="">
+                    <figcaption class="figcap_adress">гр. София<br>
+                                ул. Опълченска 112А
+                    </figcaption>
+                </figure>
+                <figure class="mail_fig">
+                    <img src="../images/email.png" alt="">
+                    <figcaption class="figcap_center">contacts@crea.bg</figcaption>
+                </figure>
+            </header>
+            <div class="map"><iframe width="600" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps" allowfullscreen></iframe></div>
+            
+
+            <form class="contacts_form" method="post" id="contacts_form" action="https://crea.bg/test/">
+                <div class="form_input">
+                    <label for="inp1" class="inp">
+                        <input type="text" name="name" id="inp1" placeholder="&nbsp;">
+                        <span class="label">Име:</span>
+                        <span class="border"></span>
+                    </label>
+                </div>
+
+                <div class="form_input">
+                    <label for="inp2" class="inp">
+                        <input type="text" name="surname" id="inp2" placeholder="&nbsp;">
+                        <span class="label">Фамилия:</span>
+                        <span class="border"></span>
+                    </label>
+                </div> 
+
+                <div class="form_input">
+                    <label for="inp3" class="inp">
+                        <input type="text" name="phone" id="inp3" placeholder="&nbsp;">
+                        <span class="label">Телефон:</span>
+                        <span class="border"></span>
+                    </label>
+                </div>
+
+                <div class="form_input">
+                    <label for="inp4" class="inp">
+                        <input type="text" name="email" id="inp4" placeholder="&nbsp;">
+                        <span class="label">E-mail:</span>
+                        <span class="border"></span>
+                    </label>
+                </div>
+                
+                <label for="inp5" class="inp textarea">
+                    <textarea class="form_textarea" name="message" autocomplete="nope" placeholder="&nbsp;" id="inp5"></textarea>
+                    <span class="label">Вашето запитване:</span>
+                    <span class="border"></span>
+                </label>
+
+                <input type="submit" name="submit_form" class="canvas_button contacts_button" value="Изпращане">
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer_index">
+        <ul>
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Проекти</a></li>
+            <li><a href="">Блог</a></li>
+            <li><a href="">Контакти</a></li>
+            <li><p><a class="crea_link" href="">Crea.bg</a> 2016-2019 &copy; All Rights Reserved.</p></li>
+        </ul>
+        <p><a class="crea_link" href="">Crea.bg</a> 2016-2019 &copy; All Rights Reserved.</p>
+    </footer>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeRor4UAAAAANHMDwoOEs2BPF_ORir0Kt2zab7Z"></script>
+    <script src="../js/recaptcha.js"></script>
+</body>
+</html>

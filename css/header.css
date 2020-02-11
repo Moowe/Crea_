@@ -1,0 +1,174 @@
+html {
+    overflow-y: scroll;
+}
+
+.header_index { /* fixed header with hamburger menu*/
+    background-color: var(--header-color, red);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header_index > a > img { /* change to <h1><p><img> etc. */
+    color: var(--text-color, red);
+    padding: 8px;
+    font-weight: bold;
+    height: 50px;
+}
+
+#drop_menu { /* transition of the hamburger menu*/
+    position: absolute;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 50px;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+.menu { /* position of drop menu, relative to hamburger menu */
+    margin-top: 16px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu > li { /* drop menu properties */
+    background-color: var(--header-color, blue);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    outline: 0;
+}
+
+.menu > li:hover, .menu > li:active  { /* drop menu hover,active*/
+    outline: 0;
+    text-decoration: none;
+    color: #404040;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: -7px 0px 20px -5px rgba(0,0,0,0.2);
+}
+
+.menu > ul { /* menu position */
+    list-style: none;
+    overflow: hidden;
+    float: right;
+}
+
+#burger_container { /* hidden checkbox > hamburger menu */
+    display: none;
+}
+
+#burger { /* position and size of hamburger menu (to center hamburger menu height >> (header_index(height) - #burger(height))/2 = top(position (px)) */
+    position: absolute;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    right: 25px;
+    top: 20.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/*v transition of the hamburger menu v*/
+
+#burger_container:checked ~ #drop_menu {
+    transform: translateX(0rem);
+}
+
+#burger_container:checked ~ #burger > div { /* color of hamburger menu(checked) */
+    background-color: var(--hamburger-color,white);
+}
+
+#burger_container:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(10px) rotate(135deg);
+}
+
+#burger_container:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+
+#burger_container:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+/*^ end of hamburger menu transition ^*/
+
+#burger > div { /* burger menu features and color */
+    height: 3px;
+    background-color: var(--hamburger-color,white);
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.drop_menu_elements, .drop_menu_elements:visited, .drop_menu_elements:hover { /* features of <a> elements of the drop menu*/
+    display: inline-block;
+    padding: 23.5px 20px; /* height is 50% of header_index > img height */
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--text-color, orange);
+}
+
+.drop_menu_elements:hover { /* nav buttons text color on hover */
+    color: var(--drop-menu-text-color-hover, black);
+}
+
+/* Media */
+
+
+@media (min-width: 769px) { /* no need to touch this */
+    #burger {
+        display: none;
+    }
+
+    #drop_menu {
+       position: absolute;
+       top: 0;
+       right: 0;
+       display: block;
+       float: left;
+       transform: translateX(0rem);
+    }
+
+    .menu {
+        margin-top: 0px;
+    }
+
+   .menu > li {
+        display: block;
+        float: left;
+    }
+
+}
+
+@media (max-width: 768px){ /* modify this to change the look of drop menu */
+    #drop_menu {
+        width: 150px;
+    }
+
+    .drop_menu_elements, .drop_menu_elements:visited, .drop_menu_elements:hover { /* change padding of drop menu list elements */
+        padding: 20px 30px;
+    }
+
+    .menu > li {
+        display: flex;
+    }
+
+    .menu > li > a {
+        width: 100%;
+    }
+
+    .menu > li > a:hover  { /* drop menu hover,active*/
+        outline: 0;
+        text-decoration: none;
+        color: #404040;
+        font-weight: 700;
+        letter-spacing: 3px;
+        box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition-duration: 0.4s;
+    }
+}

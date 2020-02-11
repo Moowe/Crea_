@@ -1,0 +1,34 @@
+.main_align section:nth-child(even) :nth-child(2) {
+  margin-left: 0px;
+}
+
+.main_align section:nth-child(even) :nth-child(2) h2 {
+  margin-left: 20px;
+}
+
+.main_align section:nth-child(even) :nth-child(2) p {
+  margin-left: 20px;
+}
+
+.main_align section:nth-child(odd) :nth-child(2) h2 {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .main_align section > a {
+    display: none;
+  }
+  .main_align section div p {
+    margin: 5px 0px 50px 0px !important;
+  }
+  .main_align section:nth-child(even) :nth-child(2) h2 {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main_align section div a {
+    display: none;
+  }
+}
+/*# sourceMappingURL=blog.css.map */

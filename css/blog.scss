@@ -1,0 +1,57 @@
+.main_align {
+
+    section:nth-child(even) {
+    
+        :nth-child(2) {
+            margin-left: 0px;
+
+            h2 {
+                margin-left: 20px;
+            }
+
+            p {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    section:nth-child(odd) {
+
+        :nth-child(2) {
+            h2 {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main_align {
+
+        section {
+
+            >a {
+                display: none;
+            }
+
+           div {
+               p {
+                   margin: 5px 0px 50px 0px!important;
+               }
+           }
+        }
+        section:nth-child(even) {
+            :nth-child(2) {
+                h2 {
+                    margin-left: 0px;
+                }
+            }
+        } 
+    }
+}
+
+@media (min-width: 768px) {
+    .main_align section div a {
+        display: none;
+    }
+}
